@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Cartography map illustration">
+  <rect width="800" height="600" fill="#e6edf8"/>
+
+  <!-- graticule grid -->
+  <g stroke="#c3d1e8" stroke-width="1.5">
+    <path d="M0 150H800M0 300H800M0 450H800"/>
+    <path d="M160 0V600M320 0V600M480 0V600M640 0V600"/>
+  </g>
+
+  <!-- landmass -->
+  <path d="M120 380 C 180 300 300 300 360 250 C 430 195 520 210 560 280 C 600 350 540 430 470 470 C 380 520 200 500 150 450 C 110 420 100 410 120 380 Z"
+        fill="#d0def3" stroke="#9db6dd" stroke-width="2"/>
+
+  <!-- topographic contour rings -->
+  <g fill="none" stroke-width="2.5">
+    <ellipse cx="360" cy="345" rx="55" ry="40" transform="rotate(-18 360 345)" stroke="#2563c9"/>
+    <ellipse cx="360" cy="345" rx="100" ry="72" transform="rotate(-18 360 345)" stroke="#3f74d1"/>
+    <ellipse cx="360" cy="345" rx="150" ry="108" transform="rotate(-18 360 345)" stroke="#5790e6"/>
+  </g>
+  <g fill="none" stroke-width="2">
+    <ellipse cx="235" cy="415" rx="34" ry="24" transform="rotate(10 235 415)" stroke="#3f74d1"/>
+    <ellipse cx="235" cy="415" rx="66" ry="46" transform="rotate(10 235 415)" stroke="#5790e6"/>
+  </g>
+
+  <!-- dashed exploration route -->
+  <path d="M150 470 C 280 400 340 520 470 430 C 600 345 620 250 690 210"
+        fill="none" stroke="#0f2f63" stroke-width="3" stroke-dasharray="2 13" stroke-linecap="round"/>
+
+  <!-- location pins -->
+  <g>
+    <g transform="translate(150 470)"><path d="M0 0 C -14 -17 -14 -36 0 -36 C 14 -36 14 -17 0 0 Z" fill="#2563c9"/><circle cx="0" cy="-23" r="5.5" fill="#e6edf8"/></g>
+    <g transform="translate(470 430)"><path d="M0 0 C -14 -17 -14 -36 0 -36 C 14 -36 14 -17 0 0 Z" fill="#0f2f63"/><circle cx="0" cy="-23" r="5.5" fill="#e6edf8"/></g>
+    <g transform="translate(690 210)"><path d="M0 0 C -14 -17 -14 -36 0 -36 C 14 -36 14 -17 0 0 Z" fill="#2563c9"/><circle cx="0" cy="-23" r="5.5" fill="#e6edf8"/></g>
+  </g>
+
+  <!-- compass rose -->
+  <g transform="translate(655 125)">
+    <circle r="46" fill="#ffffff" stroke="#2563c9" stroke-width="2"/>
+    <path d="M0 -42 L11 0 L0 42 L-11 0 Z" fill="#0f2f63"/>
+    <path d="M-42 0 L0 -11 L42 0 L0 11 Z" fill="#5790e6"/>
+    <circle r="4.5" fill="#0f2f63"/>
+  </g>
+</svg>

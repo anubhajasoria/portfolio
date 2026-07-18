@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Bollywood doodle illustration">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="36%" r="75%">
+      <stop offset="0%" stop-color="#26407a"/>
+      <stop offset="100%" stop-color="#0f2f63"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+
+  <!-- marquee bulbs -->
+  <g fill="#f0c419">
+    <circle cx="60" cy="46" r="6"/><circle cx="130" cy="42" r="6"/><circle cx="200" cy="40" r="6"/>
+    <circle cx="270" cy="40" r="6"/><circle cx="340" cy="42" r="6"/><circle cx="410" cy="44" r="6"/>
+    <circle cx="480" cy="42" r="6"/><circle cx="550" cy="40" r="6"/><circle cx="620" cy="42" r="6"/>
+    <circle cx="690" cy="46" r="6"/><circle cx="745" cy="52" r="6"/>
+  </g>
+
+  <!-- sparkles -->
+  <g fill="#f4d97a">
+    <path d="M120 150 L126 166 L142 172 L126 178 L120 194 L114 178 L98 172 L114 166 Z"/>
+    <path d="M705 250 L710 262 L722 267 L710 272 L705 284 L700 272 L688 267 L700 262 Z"/>
+    <path d="M470 130 L474 140 L484 144 L474 148 L470 158 L466 148 L456 144 L466 140 Z"/>
+  </g>
+
+  <g fill="none" stroke="#f4d97a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- clapperboard -->
+    <g transform="translate(96 372) rotate(-8)">
+      <rect x="0" y="34" width="156" height="98" rx="10"/>
+      <path d="M2 30 L158 8 L172 44 L16 66 Z"/>
+      <path d="M40 20 l16 32 M84 14 l16 32 M128 8 l16 32"/>
+    </g>
+
+    <!-- microphone -->
+    <g transform="translate(250 214)">
+      <rect x="-17" y="-42" width="34" height="74" rx="17"/>
+      <path d="M-30 12 a30 30 0 0 0 60 0"/>
+      <path d="M0 42 V74 M-22 82 H22"/>
+    </g>
+
+    <!-- musical notes -->
+    <g transform="translate(560 150)">
+      <path d="M18 78 V4 L86 -14 V44"/>
+      <path d="M18 8 L86 -10"/>
+    </g>
+
+    <!-- film reel -->
+    <g transform="translate(408 452)">
+      <circle r="58"/>
+      <circle r="15"/>
+      <circle cx="0" cy="-38" r="9"/><circle cx="36" cy="-12" r="9"/>
+      <circle cx="22" cy="34" r="9"/><circle cx="-22" cy="34" r="9"/><circle cx="-36" cy="-12" r="9"/>
+    </g>
+
+    <!-- tabla drums -->
+    <g transform="translate(600 400)">
+      <path d="M0 -6 a44 16 0 0 0 88 0 V64 a44 20 0 0 1 -88 0 Z"/>
+      <ellipse cx="44" cy="-6" rx="44" ry="16"/>
+      <path d="M108 12 a30 12 0 0 0 60 0 V58 a30 15 0 0 1 -60 0 Z"/>
+      <ellipse cx="138" cy="12" rx="30" ry="12"/>
+    </g>
+  </g>
+
+  <!-- filled note heads -->
+  <g fill="#f4d97a">
+    <ellipse cx="572" cy="230" rx="16" ry="12" transform="rotate(-18 572 230)"/>
+    <ellipse cx="640" cy="196" rx="16" ry="12" transform="rotate(-18 640 196)"/>
+  </g>
+</svg>
