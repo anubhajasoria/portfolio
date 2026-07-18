@@ -56,7 +56,7 @@ export const IMG = {
 // Hero "featured work" mini-carousel (3 highlights from PROJECTS below).
 export const COLLECTIONS = [
   { img: "/images/qualixit.png", brand: "E-commerce · Web", title: "Qualix IT Solutions", cta: "In progress", href: "#work", alt: "Qualix IT Solutions custom PC builder website" },
-  { img: "https://picsum.photos/seed/sequence/300/300", brand: "Game · Web", title: "Match & Set", cta: "In progress", href: "#work", alt: "Match & Set card-and-board game" },
+  { img: "/images/match-and-set.png", brand: "Game · Web", title: "Match & Set", cta: "In progress", href: "#work", alt: "Match & Set card-and-board game" },
   { img: "/images/bollywood-mehfil.svg", brand: "Game", title: "Bollywood Mehfil", cta: "View project", href: "#work", alt: "Bollywood Mehfil game" },
 ] as const;
 
@@ -169,7 +169,7 @@ export const PROJECTS = [
     tags: ["React", "TypeScript", "Vite", "Vitest"],
     url: "",
     repo: "https://github.com/anubhajasoria/match-and-set",
-    img: "https://picsum.photos/seed/sequence/900/560",
+    img: "/images/match-and-set.png",
     alt: "Match & Set card-and-board game",
   },
   {
@@ -191,7 +191,7 @@ export const PROJECTS = [
     tags: ["React", "D3", "Firebase", "Tailwind"],
     url: "",
     repo: "https://github.com/anubhajasoria/cartographia",
-    img: "/images/cartographia.svg",
+    img: "/images/cartographia.png",
     alt: "Cartographia game",
   },
   {
@@ -217,11 +217,14 @@ export const STATS = [
   { v: "3", l: "Countries worked with" },
 ] as const;
 
-// Tech stack — grouped by discipline (from résumé).
+// Tech stack — grouped by discipline. Every item is backed by a real
+// dependency in a shipped repo (personal, company, or client work).
 export const SKILLS = [
-  { idx: "01", group: "Frontend", items: ["React", "React Native", "Expo", "TypeScript", "JavaScript", "Redux", "MobX", "Zustand", "Tailwind", "Material UI", "HTML & CSS", "Sass"] },
-  { idx: "02", group: "Backend & APIs", items: ["Firebase", "GraphQL", "REST", "Python"] },
-  { idx: "03", group: "Tools", items: ["Git", "Jira", "Postman", "Android Studio", "Xcode", "Linux", "Vite"] },
+  { idx: "01", group: "Frontend", items: ["React", "React Native", "Next.js", "Expo", "TypeScript", "JavaScript", "HTML & CSS", "Tailwind", "NativeWind", "Sass", "styled-components", "Framer Motion"] },
+  { idx: "02", group: "State & Data", items: ["Redux Toolkit", "Zustand", "MobX", "Recoil", "React Query", "GraphQL", "REST"] },
+  { idx: "03", group: "Backend & APIs", items: ["Firebase", "Node.js", "Cloud Functions", "Stripe", "Razorpay", "Python"] },
+  { idx: "04", group: "Testing", items: ["Jest", "Vitest", "Storybook"] },
+  { idx: "05", group: "Tooling & DevOps", items: ["Git", "GitHub Actions", "Turborepo", "Monorepos", "Sentry", "Expo EAS", "Vite", "Jira"] },
 ] as const;
 
 // Footer navigation columns.
