@@ -49,8 +49,8 @@ export const SITE = {
 // Placeholder imagery via picsum (deterministic seeds). Swap for your own.
 export const IMG = {
   hero: "/images/hero.jpg",
-  aboutIcon: "https://picsum.photos/seed/aj-mark/240/240?grayscale",
-  portrait: "https://picsum.photos/seed/aj-me/400/520?grayscale",
+  aboutIcon: "/images/portrait.jpg",
+  portrait: "/images/portrait.jpg",
 };
 
 // Hero "featured work" mini-carousel (3 highlights from PROJECTS below).
@@ -65,7 +65,7 @@ export const MEMBERSHIP = {
   value: "4+",
   caption: "Years shipping web & mobile",
   img: IMG.portrait,
-  alt: "Portrait placeholder",
+  alt: "Anubha Jasoria",
   dots: ["#5790e6", "#c2e029", "#0b6e97", "#ffffff"],
 };
 
