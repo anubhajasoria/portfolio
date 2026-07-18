@@ -56,7 +56,7 @@ export const IMG = {
 // Hero "featured work" mini-carousel (3 highlights from PROJECTS below).
 export const COLLECTIONS = [
   { img: "/images/qualixit.png", brand: "E-commerce · Web", title: "Qualix IT Solutions", cta: "In progress", href: "#work", alt: "Qualix IT Solutions custom PC builder website" },
-  { img: "https://picsum.photos/seed/sequence/300/300", brand: "Game · Web", title: "Sequence Online", cta: "In progress", href: "#work", alt: "Sequence online game" },
+  { img: "https://picsum.photos/seed/sequence/300/300", brand: "Game · Web", title: "Match & Set", cta: "In progress", href: "#work", alt: "Match & Set card-and-board game" },
   { img: "/images/bollywood-mehfil.svg", brand: "Game", title: "Bollywood Mehfil", cta: "View project", href: "#work", alt: "Bollywood Mehfil game" },
 ] as const;
 
@@ -162,15 +162,15 @@ export const PROJECTS = [
     alt: "Qualix IT Solutions custom PC builder website",
   },
   {
-    name: "Sequence Online",
+    name: "Match & Set",
     category: "Game · Web",
     status: "In progress",
-    desc: "An online, multiplayer take on the Sequence board game.",
-    tags: [] as string[],
+    desc: "An original five-in-a-row card-and-board game — play a card, drop a chip, race to build lines of five. Architected so accounts and online multiplayer can be added without a rewrite.",
+    tags: ["React", "TypeScript", "Vite", "Vitest"],
     url: "",
-    repo: "",
+    repo: "https://github.com/anubhajasoria/match-and-set",
     img: "https://picsum.photos/seed/sequence/900/560",
-    alt: "Sequence online game",
+    alt: "Match & Set card-and-board game",
   },
   {
     name: "Bollywood Mehfil",
@@ -186,11 +186,11 @@ export const PROJECTS = [
   {
     name: "Cartographia",
     category: "Game",
-    status: "",
-    desc: "A map-based geography exploration game.",
-    tags: [] as string[],
+    status: "In progress",
+    desc: "A map-based geography exploration game with live multiplayer, rendered with D3 on real map data.",
+    tags: ["React", "D3", "Firebase", "Tailwind"],
     url: "",
-    repo: "",
+    repo: "https://github.com/anubhajasoria/cartographia",
     img: "/images/cartographia.svg",
     alt: "Cartographia game",
   },
