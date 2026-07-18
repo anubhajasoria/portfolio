@@ -21,7 +21,7 @@ export const SITE = {
   url: "https://anubhajasoria.in",
   email: "anubhajasoria@gmail.com",
   location: "India · Remote",
-  linkedin: "https://www.linkedin.com/in/anubha-jasoria-b321a219a/",
+  linkedin: "https://www.linkedin.com/in/anubha-jasoria/",
   github: "https://github.com/anubhajasoria",
   resumeUrl: "/Anubha-Jasoria-Resume.pdf",
 
@@ -231,10 +231,10 @@ export const SKILLS = [
 export const FOOTER_COLS = [
   { heading: "Work", links: [["Projects", "#work"], ["All Work", "/work"], ["GitHub", "https://github.com/anubhajasoria"]] },
   { heading: "About", links: [["Bio", "#about"], ["Experience", "#experience"], ["Tech Stack", "#skills"], ["Resume", "/Anubha-Jasoria-Resume.pdf"]] },
-  { heading: "Connect", links: [["LinkedIn", "https://www.linkedin.com/in/anubha-jasoria-b321a219a/"], ["GitHub", "https://github.com/anubhajasoria"], ["Email", "mailto:anubhajasoria@gmail.com"], ["Resume", "/Anubha-Jasoria-Resume.pdf"]] },
+  { heading: "Connect", links: [["LinkedIn", "https://www.linkedin.com/in/anubha-jasoria/"], ["GitHub", "https://github.com/anubhajasoria"], ["Email", "mailto:anubhajasoria@gmail.com"], ["Resume", "/Anubha-Jasoria-Resume.pdf"]] },
 ] as const;
 
-export const SOCIALS = [["LinkedIn", "https://www.linkedin.com/in/anubha-jasoria-b321a219a/"], ["GitHub", "https://github.com/anubhajasoria"], ["Email", "mailto:anubhajasoria@gmail.com"]] as const;
+export const SOCIALS = [["LinkedIn", "https://www.linkedin.com/in/anubha-jasoria/"], ["GitHub", "https://github.com/anubhajasoria"], ["Email", "mailto:anubhajasoria@gmail.com"]] as const;
 
 // Header + fullscreen menu navigation.
 export const NAV = [
