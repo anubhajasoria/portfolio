@@ -4,7 +4,7 @@ My personal portfolio site. Built with **Next.js** and **TypeScript**, with a
 custom animation layer (word-by-word hero reveal, spring cards, smooth scrolling
 via Lenis) and all content driven from a single typed content file.
 
-**Live:** [anubhajasoria.in](https://anubhajasoria.in)
+**Live:** [anubhajasoria.com](https://anubhajasoria.com)
 
 ![Portfolio homepage](docs/screenshot.png)
 
