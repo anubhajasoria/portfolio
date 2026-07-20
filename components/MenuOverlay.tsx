@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { Spring, onTick, motionStr } from "@/lib/spring";
 import { useUI } from "./Providers";
-import { BrandMark } from "./ui/BrandMark";
 import PillButton from "./ui/PillButton";
 import { SOCIALS, MENU_LINKS, SITE } from "@/lib/data";
 
@@ -101,7 +100,6 @@ export default function MenuOverlay() {
         <div className="menu-inner">
           <div className="menu-top">
             <div className="menu-brand">
-              <BrandMark />
               {SITE.wordmark}
             </div>
             <button

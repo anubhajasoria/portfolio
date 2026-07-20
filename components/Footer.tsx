@@ -6,7 +6,6 @@ import Eyebrow from "./ui/Eyebrow";
 import StackedLines from "./reveal/StackedLines";
 import PillButton from "./ui/PillButton";
 import Reveal from "./reveal/Reveal";
-import { BrandMark } from "./ui/BrandMark";
 
 export default function Footer() {
   const { openModal } = useUI();
@@ -33,7 +32,6 @@ export default function Footer() {
       <div className="foot-cols">
         <div className="foot-brand">
           <div className="bname">
-            <BrandMark />
             {SITE.wordmark}
           </div>
           <p>{SITE.role}. Designing and building thoughtful digital products, end to end.</p>

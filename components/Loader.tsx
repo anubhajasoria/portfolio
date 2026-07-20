@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Spring, onTick, motionStr } from "@/lib/spring";
 import { useUI } from "./Providers";
-import { BrandMark } from "./ui/BrandMark";
 import { SITE } from "@/lib/data";
 
 const MIN_VISIBLE_MS = 1400;
@@ -87,7 +86,6 @@ export default function Loader() {
   return (
     <div className="loader" ref={loaderRef}>
       <div className="loader-mark" ref={markRef}>
-        <BrandMark />
         {SITE.wordmark}
       </div>
       <div className="loader-track">

@@ -62,7 +62,6 @@ main{width:100%;overflow-x:clip;padding:0.5rem;}
 .brand{flex:1;display:flex;align-items:center;justify-content:flex-start;gap:0.5rem;
   font-size:1.5rem;font-weight:500;text-transform:uppercase;letter-spacing:0.2em;white-space:nowrap;}
 @media (min-width:1024px){ .brand{justify-content:center;} }
-.mark{width:1.25rem;height:1.25rem;flex:none;}
 .hdr-right{flex:1;display:flex;align-items:center;justify-content:flex-end;gap:1rem;}
 @media (min-width:640px){ .hdr-right{gap:1.25rem;} }
 .book-txt{display:none;font-size:1rem;text-transform:uppercase;letter-spacing:0.05em;}
@@ -422,7 +421,6 @@ main{width:100%;overflow-x:clip;padding:0.5rem;}
   transition:transform 850ms var(--incubic);will-change:transform;}
 .loader-mark{display:flex;align-items:center;gap:0.5rem;font-size:1.5rem;font-weight:500;
   text-transform:uppercase;letter-spacing:0.2em;will-change:transform,opacity;}
-.loader-mark .mark{width:1.75rem;height:1.75rem;}
 .loader-track{width:10rem;height:1px;border-radius:var(--radius-pill);
   background:rgba(255,255,255,0.2);overflow:hidden;}
 .loader-fill{height:100%;width:100%;background:#fff;transform:scaleX(0);transform-origin:left;}
