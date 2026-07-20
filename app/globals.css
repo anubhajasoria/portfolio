@@ -192,6 +192,13 @@ main{width:100%;overflow-x:clip;padding:0.5rem;}
 .about-key-sep{width:0.3rem;height:0.3rem;border-radius:var(--radius-pill);
   background:var(--brand-light);margin:0 1.15rem;flex:none;}
 @media (min-width:640px){ .about-key-sep{margin:0 1.75rem;} }
+/* Each separator dot sits *before* its word, so on narrow screens the row wraps
+   with dots stranded at the start of a line. Below 640px drop the dots and let
+   an even column gap do the separating instead. */
+@media (max-width:639px){
+  .about-keys{gap:0.85rem 1.4rem;}
+  .about-key-sep{display:none;}
+}
 
 .about-cta{position:relative;z-index:1;margin-top:3rem;display:flex;flex-direction:column;gap:1rem;
   align-items:flex-start;}
@@ -233,6 +240,12 @@ main{width:100%;overflow-x:clip;padding:0.5rem;}
 .prog-list li:last-child .prog-row{border-bottom:1px solid var(--hairline);}
 .prog-row:focus-visible{background:var(--background);}
 .prog-idx{width:2.5rem;font-size:0.875rem;font-weight:500;color:var(--ink-soft);flex:none;}
+/* On mobile the description runs long, so vertically centring the index leaves
+   it floating beside the middle of a paragraph. Align it to the title instead. */
+@media (max-width:639px){
+  .prog-row{align-items:flex-start;}
+  .prog-idx{padding-top:0.4rem;}
+}
 .prog-body{flex:1;}
 .prog-name{font-size:1.5rem;font-weight:500;letter-spacing:-0.02em;display:block;}
 @media (min-width:640px){ .prog-name{font-size:1.875rem;} }
@@ -275,17 +288,25 @@ main{width:100%;overflow-x:clip;padding:0.5rem;}
 .view-all:hover span{transform:translateX(4px);}
 
 .collage{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-top:3rem;}
-.collage-tile{position:relative;display:block;overflow:hidden;border-radius:var(--radius-card);
+/* Flex column so the status badge (top) and caption (bottom) share the tile
+   instead of overlapping when a long title wraps to two or three lines. */
+.collage-tile{position:relative;display:flex;flex-direction:column;align-items:flex-start;
+  overflow:hidden;border-radius:var(--radius-card);padding:0.75rem;
   background:var(--hairline);aspect-ratio:4/3;}
 .collage-tile.tile-1{grid-column:1 / -1;aspect-ratio:16/9;}
-.collage-tile img{width:100%;height:100%;object-fit:cover;transition:transform 600ms var(--expo);}
+.collage-tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  transition:transform 600ms var(--expo);}
 .collage-tile:hover img{transform:scale(1.05);}
 .collage-tile::after{content:"";position:absolute;inset:0;
   background:linear-gradient(to top, rgba(15,47,99,0.82), rgba(15,47,99,0.05) 55%);}
-.collage-cap{position:absolute;left:1rem;right:1rem;bottom:0.9rem;z-index:1;color:#fff;
-  display:flex;flex-direction:column;gap:0.15rem;}
+/* margin-top:auto (not justify-content) so the caption still sits at the
+   bottom on tiles that have no status badge above it. */
+.collage-cap{position:relative;margin-top:auto;width:100%;z-index:1;color:#fff;
+  display:flex;flex-direction:column;gap:0.15rem;padding:0 0.25rem 0.15rem;}
 .collage-cap .ct{font-size:0.65rem;text-transform:uppercase;letter-spacing:0.12em;opacity:0.85;}
-.collage-cap .nm{font-size:1.05rem;font-weight:500;letter-spacing:-0.01em;}
+/* Clamp so an unusually long name can't push the caption into the badge. */
+.collage-cap .nm{font-size:1.05rem;font-weight:500;letter-spacing:-0.01em;
+  display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;}
 .collage-tile.tile-1 .collage-cap .nm{font-size:1.75rem;}
 @media (min-width:768px){
   .collage{grid-template-columns:repeat(6,1fr);grid-auto-rows:10.5rem;gap:0.75rem;}
@@ -323,9 +344,12 @@ main{width:100%;overflow-x:clip;padding:0.5rem;}
   border-radius:var(--radius-card);overflow:hidden;}
 .work-media{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--hairline);}
 .work-media img{width:100%;height:100%;object-fit:cover;will-change:transform;}
-.work-status{position:absolute;top:0.75rem;left:0.75rem;font-size:0.7rem;font-weight:500;
+.work-status{position:absolute;top:0.75rem;left:0.75rem;z-index:1;font-size:0.7rem;font-weight:500;
   text-transform:uppercase;letter-spacing:0.08em;padding:0.3rem 0.7rem;border-radius:var(--radius-pill);
   color:#fff;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);}
+/* In the collage the badge sits in normal flow (see .collage-tile); on the
+   /work cards it stays pinned over the image. */
+.collage-tile .work-status{position:relative;top:auto;left:auto;flex:none;}
 .work-status.live{background:rgba(11,110,151,0.75);}
 .work-status.wip{background:rgba(37,99,201,0.8);}
 .work-status.soon{background:rgba(15,47,99,0.72);}
