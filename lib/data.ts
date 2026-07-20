@@ -57,7 +57,7 @@ export const IMG = {
 export const COLLECTIONS = [
   { img: "/images/qualixit.png", brand: "E-commerce · Web", title: "Qualix IT Solutions", cta: "In progress", href: "#work", alt: "Qualix IT Solutions custom PC builder website" },
   { img: "/images/match-and-set.png", brand: "Game · Web", title: "Match & Set", cta: "In progress", href: "#work", alt: "Match & Set card-and-board game" },
-  { img: "/images/bollywood-mehfil.svg", brand: "Game", title: "Bollywood Mehfil", cta: "View project", href: "#work", alt: "Bollywood Mehfil game" },
+  { img: "/images/bollywood-mehfil.png", brand: "Game · Web", title: "Bollywood Mehfil", cta: "View project", href: "#work", alt: "Bollywood Mehfil musical card game" },
 ] as const;
 
 // Hero glass stat card.
@@ -174,14 +174,14 @@ export const PROJECTS = [
   },
   {
     name: "Bollywood Mehfil",
-    category: "Game",
-    status: "",
-    desc: "A Bollywood music and trivia party game.",
-    tags: [] as string[],
-    url: "",
-    repo: "",
-    img: "/images/bollywood-mehfil.svg",
-    alt: "Bollywood Mehfil game",
+    category: "Game · Web",
+    status: "Live",
+    desc: "A pass-and-play Bollywood music party game for 2–8 players — 348 sing-and-name prompt cards across 12 themed categories and 21 artist decks, with a turn timer, three scoring modes and a light/dark theme.",
+    tags: ["React 19", "TypeScript", "Vite", "Tailwind"],
+    url: "https://bollywood-mehfil.vercel.app/",
+    repo: "https://github.com/anubhajasoria/bollywood-mehfil",
+    img: "/images/bollywood-mehfil.png",
+    alt: "Bollywood Mehfil musical card game",
   },
   {
     name: "Cartographia",
