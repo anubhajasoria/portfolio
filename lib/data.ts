@@ -46,7 +46,7 @@ export const SITE = {
   taglineLines: ["Build and", "Deploy"],
 };
 
-// Placeholder imagery via picsum (deterministic seeds). Swap for your own.
+// Shared imagery used outside the project cards.
 export const IMG = {
   hero: "/images/hero.jpg",
   aboutIcon: "/images/portrait.jpg",
@@ -55,9 +55,9 @@ export const IMG = {
 
 // Hero "featured work" mini-carousel (3 highlights from PROJECTS below).
 export const COLLECTIONS = [
-  { img: "/images/qualixit.png", brand: "E-commerce · Web", title: "Qualix IT Solutions", cta: "In progress", href: "#work", alt: "Qualix IT Solutions custom PC builder website" },
-  { img: "/images/match-and-set.png", brand: "Game · Web", title: "Match & Set", cta: "In progress", href: "#work", alt: "Match & Set card-and-board game" },
-  { img: "/images/bollywood-mehfil.png", brand: "Game · Web", title: "Bollywood Mehfil", cta: "View project", href: "#work", alt: "Bollywood Mehfil musical card game" },
+  { img: "/images/qualixit.jpg", brand: "E-commerce · Web", title: "Qualix IT Solutions", cta: "In progress", href: "#work", alt: "Qualix IT Solutions custom PC builder website" },
+  { img: "/images/match-and-set.jpg", brand: "Game · Web", title: "Match & Set", cta: "In progress", href: "#work", alt: "Match & Set card-and-board game" },
+  { img: "/images/bollywood-mehfil.jpg", brand: "Game · Web", title: "Bollywood Mehfil", cta: "View project", href: "#work", alt: "Bollywood Mehfil musical card game" },
 ] as const;
 
 // Hero glass stat card.
@@ -158,7 +158,7 @@ export const PROJECTS = [
     tags: ["Next.js", "React", "TypeScript", "Firebase"],
     url: "https://qit-be--qualixit-website.asia-east1.hosted.app/",
     repo: "",
-    img: "/images/qualixit.png",
+    img: "/images/qualixit.jpg",
     alt: "Qualix IT Solutions custom PC builder website",
   },
   {
@@ -169,7 +169,7 @@ export const PROJECTS = [
     tags: ["React", "TypeScript", "Vite", "Vitest"],
     url: "",
     repo: "https://github.com/anubhajasoria/match-and-set",
-    img: "/images/match-and-set.png",
+    img: "/images/match-and-set.jpg",
     alt: "Match & Set card-and-board game",
   },
   {
@@ -180,7 +180,7 @@ export const PROJECTS = [
     tags: ["React 19", "TypeScript", "Vite", "Tailwind"],
     url: "https://bollywood-mehfil.vercel.app/",
     repo: "https://github.com/anubhajasoria/bollywood-mehfil",
-    img: "/images/bollywood-mehfil.png",
+    img: "/images/bollywood-mehfil.jpg",
     alt: "Bollywood Mehfil musical card game",
   },
   {
@@ -191,8 +191,8 @@ export const PROJECTS = [
     tags: ["React", "D3", "Firebase", "Tailwind"],
     url: "",
     repo: "https://github.com/anubhajasoria/cartographia",
-    img: "/images/cartographia.png",
-    alt: "Cartographia game",
+    img: "/images/cartographia.jpg",
+    alt: "Cartographia — glowing wireframe world map with connected location pins",
   },
   {
     name: "Silica Sand & Quartz Trading",
@@ -202,8 +202,8 @@ export const PROJECTS = [
     tags: [] as string[],
     url: "",
     repo: "",
-    img: "https://picsum.photos/seed/silica/900/560",
-    alt: "Silica sand and quartz trading business website",
+    img: "/images/silica.jpg",
+    alt: "Silica sand pouring past raw quartz crystals",
   },
  
 ];
