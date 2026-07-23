@@ -36,7 +36,6 @@ export default function Footer() {
           </div>
           <p>{SITE.role}. Designing and building thoughtful digital products, end to end.</p>
           <address>
-            <button type="button" className="link-reset" onClick={openModal}>{SITE.email}</button>
             <span className="muted">{SITE.location}</span>
           </address>
         </div>
