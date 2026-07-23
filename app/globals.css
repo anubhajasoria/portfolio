@@ -421,6 +421,8 @@ main{width:100%;overflow-x:clip;padding:0.5rem;}
 .foot-col ul{list-style:none;margin-top:1rem;display:flex;flex-direction:column;gap:0.75rem;
   font-size:0.875rem;color:rgba(255,255,255,0.8);}
 .foot-col a:hover{color:#fff;}
+.link-reset{text-align:left;}
+.link-reset:hover{color:#fff;}
 .foot-bottom{border-top:1px solid rgba(255,255,255,0.15);padding-top:2rem;font-size:0.875rem;
   color:rgba(255,255,255,0.6);display:flex;flex-direction:column;gap:1.25rem;}
 @media (min-width:640px){ .foot-bottom{flex-direction:row;justify-content:space-between;align-items:center;} }

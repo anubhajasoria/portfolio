@@ -36,7 +36,7 @@ export default function Footer() {
           </div>
           <p>{SITE.role}. Designing and building thoughtful digital products, end to end.</p>
           <address>
-            <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+            <button type="button" className="link-reset" onClick={openModal}>{SITE.email}</button>
             <span className="muted">{SITE.location}</span>
           </address>
         </div>
@@ -46,7 +46,11 @@ export default function Footer() {
             <ul>
               {col.links.map(([label, href], i) => (
                 <li key={`${label}-${i}`}>
-                  <a href={href}>{label}</a>
+                  {href.startsWith("mailto:") ? (
+                    <button type="button" className="link-reset" onClick={openModal}>{label}</button>
+                  ) : (
+                    <a href={href}>{label}</a>
+                  )}
                 </li>
               ))}
             </ul>
@@ -57,9 +61,13 @@ export default function Footer() {
       <div className="foot-bottom">
         <span>© 2026 {SITE.name}. All rights reserved.</span>
         <nav className="foot-social">
-          {SOCIALS.map(([label, href]) => (
-            <a key={href} href={href}>{label}</a>
-          ))}
+          {SOCIALS.map(([label, href]) =>
+            href.startsWith("mailto:") ? (
+              <button type="button" className="link-reset" key={href} onClick={openModal}>{label}</button>
+            ) : (
+              <a key={href} href={href}>{label}</a>
+            )
+          )}
         </nav>
         <nav className="foot-legal">
           <a href="#privacy">Privacy</a>
