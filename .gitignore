@@ -23,8 +23,6 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # env files
-.env
-.env*.local
 
 # typescript
 *.tsbuildinfo
@@ -35,3 +33,4 @@ yarn-error.log*
 # editor
 .idea
 .vscode
+.env*
