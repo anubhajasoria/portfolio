@@ -478,6 +478,7 @@ main{width:100%;overflow-x:clip;padding:0.5rem;}
   padding:0.875rem 1.75rem;font-size:0.875rem;font-weight:500;text-transform:uppercase;letter-spacing:0.05em;}
 .submit-btn:hover{background:var(--brand-deep);}
 .submit-btn:disabled{opacity:0.6;cursor:default;}
+.form-error{font-size:0.8125rem;color:#c0392b;margin:0;}
 .success{margin-top:2rem;border-radius:var(--radius-card);background:var(--surface);
   padding:1.5rem;text-align:center;}
 .success .check{width:3rem;height:3rem;margin:0 auto;border-radius:var(--radius-pill);

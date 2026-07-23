@@ -14,6 +14,7 @@ export default function ContactModal() {
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
   const [firstName, setFirstName] = useState("there");
+  const [error, setError] = useState<string | null>(null);
 
   const backdropRef = useRef<HTMLDivElement | null>(null);
   const panelRef = useRef<HTMLDivElement | null>(null);
@@ -63,6 +64,7 @@ export default function ContactModal() {
         setSubmitting(false);
         setSuccess(false);
         setFirstName("there");
+        setError(null);
       }, 350);
       return () => window.clearTimeout(t);
     }
@@ -78,17 +80,31 @@ export default function ContactModal() {
     return () => window.removeEventListener("keydown", onKey);
   }, [modalOpen, closeModal]);
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
     const name = String(data.get("name") || "").trim();
+    const email = String(data.get("email") || "").trim();
+    const message = String(data.get("message") || "").trim();
     setFirstName(name.split(/\s+/)[0] || "there");
+    setError(null);
     setSubmitting(true);
-    // No-op stub — never hits a network.
-    window.setTimeout(() => {
-      setSubmitting(false);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message }),
+      });
+      if (!res.ok) {
+        const body = await res.json().catch(() => ({}));
+        throw new Error(body.error || "Failed to send message");
+      }
       setSuccess(true);
-    }, 700);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Failed to send message");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   if (!mounted) return null;
@@ -140,6 +156,7 @@ export default function ContactModal() {
               <label htmlFor="mf-msg">What can I help with?</label>
               <textarea id="mf-msg" name="message" rows={3} placeholder="A bit about your project, timeline, and what you're looking for…" />
             </div>
+            {error && <p className="form-error">{error}</p>}
             <button className="submit-btn" type="submit" disabled={submitting}>
               {submitting ? "Sending…" : "Send message"}
             </button>

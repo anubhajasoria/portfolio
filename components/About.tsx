@@ -2,6 +2,7 @@
 
 import { useHoverSpring } from "@/lib/hooks";
 import { ABOUT } from "@/lib/data";
+import { useUI } from "./Providers";
 import Eyebrow from "./ui/Eyebrow";
 import StackedLines from "./reveal/StackedLines";
 import FadeWords from "./reveal/FadeWords";
@@ -35,6 +36,7 @@ function TraitCard({ t, i }: { t: (typeof ABOUT.traits)[number]; i: number }) {
 }
 
 export default function About() {
+  const { openModal } = useUI();
   return (
     <section className="about" id="about">
       <div className="about-head">
@@ -84,10 +86,10 @@ export default function About() {
         config={{ tension: 200, friction: 26 }}
       >
         <span className="about-cta-text">{ABOUT.ctaText}</span>
-        <a className="about-cta-link" href={ABOUT.ctaHref}>
+        <button type="button" className="about-cta-link" onClick={openModal}>
           {ABOUT.ctaLabel}
           <span aria-hidden="true">→</span>
-        </a>
+        </button>
       </Reveal>
     </section>
   );
