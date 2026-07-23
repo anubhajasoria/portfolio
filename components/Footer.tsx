@@ -68,10 +68,6 @@ export default function Footer() {
             )
           )}
         </nav>
-        <nav className="foot-legal">
-          <a href="#privacy">Privacy</a>
-          <a href="#terms">Terms</a>
-        </nav>
       </div>
     </footer>
   );

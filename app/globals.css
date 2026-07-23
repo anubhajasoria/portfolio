@@ -426,7 +426,7 @@ main{width:100%;overflow-x:clip;padding:0.5rem;}
 .foot-bottom{border-top:1px solid rgba(255,255,255,0.15);padding-top:2rem;font-size:0.875rem;
   color:rgba(255,255,255,0.6);display:flex;flex-direction:column;gap:1.25rem;}
 @media (min-width:640px){ .foot-bottom{flex-direction:row;justify-content:space-between;align-items:center;} }
-.foot-social,.foot-legal{display:flex;gap:1.25rem;}
+.foot-social{display:flex;gap:1.25rem;}
 .foot-bottom a:hover{color:#fff;}
 
 /* ============ PILL BUTTON ============ */
